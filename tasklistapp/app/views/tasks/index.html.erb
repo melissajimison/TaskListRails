@@ -1,0 +1,6 @@
+<h1>Here is the big list of albums!!!!</h1>
+<ul>
+   <%@all_tasks.each do |task| %>
+   <li> <%= link_to task.name, "/#{task.name}"%> : <%=task.description%></li>
+   <%end%>
+</ul>
