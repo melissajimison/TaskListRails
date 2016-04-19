@@ -16,8 +16,8 @@ tasks = [
   { name: "Go to Second Lunch", description: "Colombian Candies" },
   { name: "Play the pending chess games", description: "I would lose if dont play a game for 5 days", completed_at: random_time },
   { name: "Trip to Portland", description: "Get cash, and those fun size personal products" },
-  { name: "Water Plants ", description: "Use the sprinkler in the garden house" },
-  { name: "Nap.", description: "20 minutes nap after second lunch", completed_at: random_time }
+  { name: "Water Plants", description: "Use the sprinkler in the garden house" },
+  { name: "Nap", description: "20 minutes nap after second lunch", completed_at: random_time }
 ]
 
 tasks.each do |task|

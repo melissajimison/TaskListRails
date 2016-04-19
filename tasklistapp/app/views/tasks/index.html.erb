@@ -1,6 +1,7 @@
-<h1>Here is the big list of albums!!!!</h1>
-<ul>
+<h1>Here is the big list of things I have to do!!!!</h1>
+<div class="task-container">
    <%@all_tasks.each do |task| %>
-   <li> <%= link_to task.name, "/#{task.name}"%> : <%=task.description%></li>
+   <div class="task-item">
+<%= link_to task.name, "/#{task.name}"%></div>
    <%end%>
-</ul>
+</div>

@@ -4,10 +4,9 @@ class TasksController < ApplicationController
 
   end
 
-  def by_task
+  def by_name
 
     @all_tasks = Task.where(name: params[:name])
 
-    render :index
   end
 end
