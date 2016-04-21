@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'tasks#index'
 
+  get '/tasks/new' => 'tasks#new'
+  post '/tasks' => 'tasks#create', as: 'tasks'
 
   get '/:name' => 'tasks#by_name'
 

@@ -1,0 +1,17 @@
+<div class="task-container">
+
+<h1>HI!! Let's make a new task!</h1>
+
+<pre>  <%= params %> </pre>
+<%= form_for @task, class: "main-form" do |f| %>
+
+<%= f.label :name, value="New Task" %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.submit %>
+<% end %>
+
+</div>
