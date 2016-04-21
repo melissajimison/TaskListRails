@@ -2,6 +2,10 @@
 <div class="task-container">
    <%@all_tasks.each do |task| %>
    <div class="task-item">
-<%= link_to task.name, "/#{task.name}"%></div>
+<%= link_to task.name, "/#{task.name}"%>
+<%= button_to "Remove That", "/delete/#{task.id}", method: :delete, data: { confirm: "Are you sure?" }  %>
+</div>
    <%end%>
 </div>
+
+<pre>  <%= params %> </pre>

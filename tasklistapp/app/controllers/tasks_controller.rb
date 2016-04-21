@@ -18,7 +18,12 @@ class TasksController < ApplicationController
     else
       render :new
     end
-    # @task = Task.new
+  end
+
+  def delete
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to root_path
   end
 
 

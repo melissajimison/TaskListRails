@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   get '/tasks/new' => 'tasks#new'
   post '/tasks' => 'tasks#create', as: 'tasks'
 
+  delete '/delete/:id' => 'tasks#delete', as: 'delete'
+
   get '/:name' => 'tasks#by_name'
 
-  # get '/atask' => 'tasks#by_task'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
