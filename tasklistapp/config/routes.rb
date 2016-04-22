@@ -4,9 +4,14 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'tasks#index'
+  # get '/tasks' => 'tasks#index'
+
 
   get '/tasks/new' => 'tasks#new'
   post '/tasks' => 'tasks#create', as: 'tasks'
+
+  patch '/completed/:id' => 'tasks#completed', as: 'completed'
+  # get '/completed/:id' => 'tasks#comp'
 
   delete '/delete/:id' => 'tasks#delete', as: 'delete'
 

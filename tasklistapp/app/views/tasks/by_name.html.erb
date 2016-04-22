@@ -2,9 +2,14 @@
 <div class="task-container">
    <%@all_tasks.each do |task| %>
    <div class="task-item">
-   <%= link_to task.name, "/#{task.name}"%>
-   <br> <%=task.description%>
-   <br>Completed?<%=task.completed_at%>
+     <p class="text"><%= link_to task.name, "/#{task.name}"%>
+       <br>
+       <%= task.description%>
+       <br>
+   <%= task.completed_at %>
+ </p>
     </div>
    <%end%>
 </div>
+
+<%= params %>

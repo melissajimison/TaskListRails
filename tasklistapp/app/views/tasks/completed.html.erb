@@ -1,0 +1,18 @@
+
+<div class="task-container">
+
+  <%@all_tasks.each do |task| %>
+  <div class="task-item">
+ <p class="text"><%= link_to task.name, "/#{task.name}"%>
+   <br>
+   <%= task.description%>
+   <br>
+   <%= task.completed_at%>
+ </p>
+ <%= button_to "Remove That", "/delete/#{task.id}", method: :delete, data: { confirm: "Are you sure?" }  %>
+ </div>
+  <%end%>
+
+
+
+</div>
