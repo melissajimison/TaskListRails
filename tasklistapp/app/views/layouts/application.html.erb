@@ -14,6 +14,7 @@
     <link rel="icon" type="image/x-icon" href="./images/check-icon.png" >
     <link rel="shortcut icon" type="image/x-icon" href="./images/check-icon.png"/>
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -24,7 +25,7 @@
         <ul>
         <li><a href= "/"> Current Tasks</a></li>
         <li><a href= "/tasks/new"> New Task</a></li>
-        <li><a href= "/tasks/completed"> Completed Tasks</a></li>
+        <li><a href= "/completed/<%=params[:id]%>"> Completed Tasks</a></li>
         </ul>
       </nav>
     </header>

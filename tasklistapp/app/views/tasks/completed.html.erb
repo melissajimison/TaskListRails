@@ -1,7 +1,7 @@
 
 <div class="task-container">
 
-  <%@all_tasks.each do |task| %>
+  <%@all_completed_tasks.each do |task| %>
   <div class="task-item">
  <p class="text"><%= link_to task.name, "/#{task.name}"%>
    <br>

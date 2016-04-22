@@ -1,11 +1,10 @@
 class TasksController < ApplicationController
   def index
     @all_tasks = Task.order(completed_at: :asc).where(completed_at: nil)
+end
 
-  end
-
-  def by_name
-    @all_tasks = Task.where(name: params[:name])
+  def show
+    @task = Task.find(params[:id])
   end
 
   def new
@@ -21,13 +20,19 @@ class TasksController < ApplicationController
     end
   end
 
+  # def edit
+  #   @task = Task.find(params[:id])
+  #   # redirect_to root_path
+  #
+  # end
+
   def completed
     @task = Task.find(params[:id])
     @task.update(completed_at: DateTime.now)
-    @all_tasks = Task.where.not(completed_at: nil)
+    @all_completed_tasks = Task.where.not(completed_at: nil)
   end
 
-  def delete
+  def destroy
     @task = Task.find(params[:id])
     @task.destroy
     redirect_to root_path
