@@ -6,7 +6,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
     <!-- for FF, Chrome, Opera -->
     <link rel="icon" type="image/png" href="./images/check-icon.png" sizes="16x16">
     <link rel="icon" type="image/png" href="./images/check-icon.png" sizes="32x32">
@@ -14,7 +13,6 @@
     <link rel="icon" type="image/x-icon" href="./images/check-icon.png" >
     <link rel="shortcut icon" type="image/x-icon" href="./images/check-icon.png"/>
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -25,7 +23,7 @@
         <ul>
         <li><a href= "/"> Current Tasks</a></li>
         <li><a href= "/tasks/new"> New Task</a></li>
-        <li><a href= "/completed/<%=params[:id]%>"> Completed Tasks</a></li>
+        <li><%= link_to "Completed Tasks", completed_path(1) %></li>
         </ul>
       </nav>
     </header>

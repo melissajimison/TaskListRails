@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @all_tasks = Task.order(completed_at: :asc).where(completed_at: nil)
+    @all_tasks = Task.order(completed_at: :asc)#.where(completed_at: '')
 end
 
   def show
@@ -20,16 +20,32 @@ end
     end
   end
 
-  # def edit
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    @task.update(tasks_create_params[:task])
+    redirect_to root_path
+  end
+
+  # def precompleted
   #   @task = Task.find(params[:id])
-  #   # redirect_to root_path
-  #
+  #   render :completed
   # end
 
   def completed
     @task = Task.find(params[:id])
     @task.update(completed_at: DateTime.now)
-    @all_completed_tasks = Task.where.not(completed_at: nil)
+    @all_tasks = Task.where.not(completed_at: "")
+  end
+
+  def uncompleted
+    @task = Task.find(params[:id])
+    @task.update(completed_at: "")
+    redirect_to root_path
+
   end
 
   def destroy

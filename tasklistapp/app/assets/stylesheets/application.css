@@ -14,14 +14,9 @@
  *= require_self
  */
 
- @import "font-awesome-sprockets";
-   @import "font-awesome";
-   
  html {
    background-attachment: fixed;
-   background-image: url("../images/notebook-background.png");
    background-position: center;
-   background-repeat: no-repeat;
    background-size: cover;
    -webkit-background-size: cover;
    -moz-background-size: cover;
@@ -119,28 +114,48 @@
    margin: .8rem;
    text-align: left;
    width: 28%;
-   height: 300px;
+   height: 340px;
    background-image: url("note.png");
+   background-repeat: no-repeat;
+   border: solid green;
+   overflow: auto;
+
+ }
+
+ .task-item-azul {
+   display: inline-block;
+   font-size: 24px;
+   font-weight: 300;
+   margin: .8rem;
+   text-align: left;
+   width: 28%;
+   height: 300px;
+   background-image: url("note2.png");
    background-repeat: no-repeat;
    border: solid green;
 
  }
 
  .text{
+   height: 115px;
    border: solid blue;
    width: 75%;
    margin:2rem;
    margin-top:6rem;
-
 }
 
  .task-description {
    padding: 6rem;
    line-height: 2.2rem;
    border: solid black;
-
  }
 
+.buttons{
+  display: flex;
+  border: solid red;
+  position: relative;
+  margin-bottom: 0;
+}
  .submit-button{
    color:white;
    margin-top: 5px;

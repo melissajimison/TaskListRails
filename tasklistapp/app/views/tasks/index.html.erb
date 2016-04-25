@@ -1,12 +1,28 @@
 <h1>Here is the big list of things I have to do!!!!</h1>
 <div class="task-container">
    <%@all_tasks.each do |task| %>
-   <div class="task-item">
-<p class="text"><%= link_to task.name, task_path(task.id)%><p>
-<!-- <%= button_to "Edit", "/tasks/#{task.id}/edit", method: :patch %> -->
+   <% if task.completed_at == "" %>
 
-<!-- <%= button_to "Completed!!", "/tasks/#{task.id}", method: :patch %> -->
-<!-- <%= button_to "Remove That", "/tasks/#{task.id}", method: :delete, data: { confirm: "Are you sure?" }  %> -->
+   <div class="task-item">
+     <% elsif task.completed_at != "" %>
+
+    <div class="task-item-azul">
+      <% else %>
+      <%= "ERROR" %>
+
+      <% end %>
+
+     <p class="text">
+     <%= link_to task.name, task_path(task.id)%>
+       <br>
+       <%=task.completed_at%>
+     </p>
+     <div class="buttons">
+
+<%= button_to "Edit", edit_path(task.id), method: :get %>
+<%= button_to "Completed!!", completed_path(task.id), method: :patch %>
+<%= button_to "Remove That", destroy_path(task.id), method: :delete, data: { confirm: "Are you sure?" }  %>
+</div>
 </div>
  <%end%>
 </div>
