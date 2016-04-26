@@ -133,7 +133,6 @@
 
  .text{
    height: 115px;
-   border: solid blue;
    width: 75%;
    margin:2rem;
    margin-top:6rem;
@@ -142,7 +141,6 @@
  .task-description {
    padding: 6rem;
    line-height: 2.2rem;
-   border: solid black;
  }
 
 .buttons{

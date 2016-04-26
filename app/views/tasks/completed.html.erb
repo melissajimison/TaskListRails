@@ -2,21 +2,18 @@
 <div class="task-container">
   <%@all_tasks = Task.where.not(completed_at: "").order(completed_at: :desc)%>
 
-   <%@all_tasks.each do |task| %>
-   <div class="task-item">
-     <p class="text"><%= link_to task.name, task_path(task.id)%>
-       <br>
-       <%=task.completed_at%>
-     </p>
-<!-- <%= button_to "Edit", "/tasks/#{task.id}/edit", method: :patch %> -->
-<div class="buttons">
+  <%@all_tasks.each do |task| %>
+  <div class="task-item">
+    <p class="text"><%= link_to task.name, task_path(task.id)%>
+      <br>
+      <%=task.completed_at%>
+    </p>
 
-<%= button_to "Opps um!!", uncompleted_path(task.id), method: :patch %>
-<%= button_to "Remove That", destroy_path(task.id), method: :delete, data: { confirm: "Are you sure?" }  %>
-</div>
-</div>
+    <div class="buttons">
+      <%= button_to "Opps um!!", uncompleted_path(task.id), method: :patch %>
+      <%= button_to "Remove That", destroy_path(task.id), method: :delete, data: { confirm: "Are you sure?" }  %>
+    </div>
+  </div>
 
- <%end%>
+  <%end%>
 </div>
-
-<pre>  <%= params %> </pre>
