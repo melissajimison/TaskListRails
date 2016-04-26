@@ -16,11 +16,22 @@
      <%= link_to task.name, task_path(task.id)%>
        <br>
        <%=task.completed_at%>
+       <br>
+
+       <%=task.person.name%>
+
      </p>
      <div class="buttons">
 
+
+
 <%= button_to "Edit", edit_path(task.id), method: :get %>
+<% if task.completed_at == ""%>
 <%= button_to "Completed!!", completed_path(task.id), method: :patch %>
+  <% else %>
+<%= button_to "Opps um!!", uncompleted_path(task.id), method: :patch %>
+<% end %>
+
 <%= button_to "Remove That", destroy_path(task.id), method: :delete, data: { confirm: "Are you sure?" }  %>
 </div>
 </div>

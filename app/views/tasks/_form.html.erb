@@ -1,0 +1,22 @@
+<div class="task-container">
+
+<h1>HI!! Let's <%= @title %> task!</h1>
+
+<%= form_for @task, class: "main-form" do |f| %>
+
+<%= f.label :name, value="New Task" %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<br>
+
+<%= f.label :completed_at, value="Completed?" %>
+<%= f.text_field :completed_at %>
+
+<br>
+
+<%= f.submit %>
+<% end %>
+
+</div>

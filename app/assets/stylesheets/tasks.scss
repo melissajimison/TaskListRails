@@ -1,3 +1,14 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.task-item-azul {
+  background: image-url("note2.png");
+  background-repeat: no-repeat;
+
+}
+
+.task-item {
+background: image-url("note.png");
+background-repeat: no-repeat;
+
+}
