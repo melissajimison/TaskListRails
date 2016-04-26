@@ -1,7 +1,7 @@
 <div class="task-container">
 
-<h1>HI!! Let's <%= @title %> task!</h1>
-
+<div class="tittle"><h1>HI!! Let's <%= @title %> task!</h1></div>
+<div class="form">
 <%= form_for @task, class: "main-form" do |f| %>
 
 <%= f.label :name, value="New Task" %>
@@ -13,12 +13,15 @@
 
 <%= f.label :completed_at, value="Completed?" %>
 <%= f.text_field :completed_at %>
-<%= f.collection_select :person_id, Person.all, :id, :name, :require => true %>
+<br>
+
+<%= f.collection_select :person_id, Person.all, :id, :name, :require => true, class: "drop" %>
+<br>
 
 
 <br>
 
 <%= f.submit %>
 <% end %>
-
+</div>
 </div>
