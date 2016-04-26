@@ -9,7 +9,6 @@ end
 
   def new
     @task = Task.new
-    @title = "make a new"
   end
 
   def create
@@ -24,7 +23,6 @@ end
 
   def edit
     @task = Task.find(params[:id])
-    @title = "edit"
   end
 
   def update
