@@ -61,7 +61,7 @@ end
   private
 
   def tasks_create_params
-    params.permit(task: [:name, :description, :completed_at])
+    params.permit(task: [:name, :description, :person_id, :completed_at])
     # params.permit(album: [:artist, :title])
   end
 end

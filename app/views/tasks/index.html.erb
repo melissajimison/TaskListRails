@@ -17,8 +17,9 @@
        <br>
        <%=task.completed_at%>
        <br>
-
-       <%=task.person.name%>
+       <% if task.person %>
+          <%= task.person.name %>
+       <% end %>
 
      </p>
      <div class="buttons">
@@ -37,5 +38,3 @@
 </div>
  <%end%>
 </div>
-
-<pre>  <%= params %> </pre>
