@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   #
   delete '/tasks/:id' => 'tasks#destroy', as: 'destroy'
 
+  get '/people' => 'people#index', as: 'people'
 
 
   # Example of regular route:

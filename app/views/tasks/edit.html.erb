@@ -1,1 +1,25 @@
-<%= render "form" %>
+<!-- <%= render "form" %> -->
+<div class="task-container">
+
+<h1>HI!! Let's <%= @title %> task!</h1>
+
+<%= form_for @task, class: "main-form" do |f| %>
+
+<%= f.label :name, value="New Task" %>
+<%= f.text_field :name, :require => true %>
+<br>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<br>
+
+<%= f.label :completed_at, value="Completed?" %>
+<%= f.text_field :completed_at %>
+<%= f.collection_select :person_id, Person.all, :id, :name, :require => true %>
+
+
+<br>
+
+<%= f.submit %>
+<% end %>
+
+</div>
