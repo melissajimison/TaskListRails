@@ -8,20 +8,20 @@ Rails.application.routes.draw do
 
 
   post '/tasks' => 'tasks#create'
-  get '/tasks/new' => 'tasks#new'
+  get '/tasks/new' => 'tasks#new', as: 'new_task'
 
-  get '/tasks/:id' => 'tasks#show', as: 'task'
+  get '/tasks/completed' => 'tasks#allcompleted', as: 'allcompleted'
 
-
-  get '/task/:id/edit' => 'tasks#edit', as: 'edit_task'
+  get '/tasks/:id/edit' => 'tasks#edit', as: 'edit_task'
   patch '/tasks/:id' => 'tasks#update'
 
-  get '/tasks/completed' => 'tasks#precompleted', as: 'precompleted'
+
   patch '/tasks/:id/completed' => 'tasks#completed', as: 'completed'
 
   patch '/tasks/:id/uncompleted' => 'tasks#uncompleted', as: 'uncompleted'
 
   #
+  get '/tasks/:id' => 'tasks#show', as: 'task'
   delete '/tasks/:id' => 'tasks#destroy', as: 'destroy'
 
   # get '/people' => 'people#index', as: 'people'

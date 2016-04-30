@@ -9,7 +9,7 @@
       <%= @task.completed_at %>
     </p>
     <div class="buttons">
-    <%= button_to "Edit", edit_path(@task.id), method: :get %>
+    <%= button_to "Edit", edit_task_path(@task.id), method: :get %>
 
     <% if @task.completed_at == ""%>
     <%= button_to "Completed!!", completed_path(@task.id), method: :patch %>

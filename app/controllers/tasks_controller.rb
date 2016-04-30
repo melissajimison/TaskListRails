@@ -31,9 +31,8 @@ end
     redirect_to root_path
   end
 
-  def precompleted
+  def allcompleted
     @all_tasks = Task.where.not(completed_at: "")
-    redirect_to completed_path
   end
 
   def completed
