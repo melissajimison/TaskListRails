@@ -1,11 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  description: MyString
-  completion_indicator: MyString
-
-two:
-  name: MyString
-  description: MyString
-  completion_indicator: MyString
+go_to_brunch:
+  name: Go to Brunch
+  description: Ask if it is hot, if it is veggetarian, and don't get French Toast

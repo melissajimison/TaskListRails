@@ -1,0 +1,216 @@
+/* line 4, /Users/melissajimison/Documents/c5/projects/TaskListRails/app/assets/stylesheets/tasks.scss */
+.task-item-azul {
+  background: url(/assets/note2-08b458e9f505795126c94822c52f1b268db0e36235f06e3e6fbd4323df1f800d.png);
+}
+
+/* line 8, /Users/melissajimison/Documents/c5/projects/TaskListRails/app/assets/stylesheets/tasks.scss */
+.task-item {
+  background: url(/assets/note-d60e7812f97c8797b4a3cd9bc6d8c9777778ce25362439caf990a523258b8910.png);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+ /*
+  * This is a manifest file that'll be compiled into application.css, which will include all the files
+  * listed below.
+  *
+  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+  *
+  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+  * compiled file so the styles you add here take precedence over styles defined in any styles
+  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+  * file per style scope.
+  *
+  *= require_tree .
+  *= require_self
+  */
+
+  html {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  h1 {
+    font-weight: 400;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .main-form label {
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+  }
+
+  .both-forms {
+    margin: 0;
+    margin-top: 20px;
+    overflow: auto;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .check-form, .check-deleted {
+    color: #262127;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .check-form {
+    float: left;
+  }
+
+  .check-deleted {
+    float: right;
+  }
+
+  .top-bar {
+    color:#D76B88;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .top-bar ul {
+    list-style: none;
+  }
+
+  .top-bar ul li {
+    display: inline;
+  }
+
+  .top-bar a {
+    color:#D76B88;
+    font-size: 32px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    text-decoration: none;
+  }
+
+  .task-container {
+    background-color: rgba(244,244,244,.7);
+    border-radius: 15px;
+    color:#4D434F;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    margin-right: 10%;
+    margin-left: auto;
+    margin-bottom: 1%;
+    overflow: auto;
+    width: 80%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 3rem;
+
+
+
+  }
+
+  .task-item {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 300;
+    margin: .8rem;
+    text-align: left;
+    width: 28%;
+    height: 340px;
+    overflow: auto;
+
+  }
+
+  .task-item-azul {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 300;
+    margin: .8rem;
+    text-align: left;
+    width: 28%;
+    height: 300px;
+
+  }
+
+  .text{
+    height: 115px;
+    width: 75%;
+    margin:2rem;
+    margin-top:6rem;
+ }
+
+  .task-description {
+    padding: 6rem;
+    line-height: 2.2rem;
+  }
+
+ .buttons{
+   display: flex;
+   position: relative;
+   margin-bottom: 0;
+ }
+
+ .form{
+   position: relative;
+   float: left;
+   margin-left: 10%;
+ }
+  .submit-button{
+    color:white;
+    margin-top: 5px;
+    padding: 10px;
+  }
+
+ .drop{
+ border: solid red;
+
+ }
+  input[type=submit] {
+    background-color: rgb(6,104,165);
+    border-radius: 5px;
+    color:white;
+    cursor:pointer;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding:5px 15px 5px 15px;
+  }
+
+  input[type=text] {
+      border-radius: 5px;
+      color:#3F1A08;
+      cursor:pointer;
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      margin-top: 5px;
+      margin-left: 10px;
+      padding:5px 15px;
+  }

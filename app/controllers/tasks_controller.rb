@@ -31,10 +31,10 @@ end
     redirect_to root_path
   end
 
-  # def precompleted
-  #   @task = Task.find(params[:id])
-  #   render :completed
-  # end
+  def precompleted
+    @all_tasks = Task.where.not(completed_at: "")
+    redirect_to completed_path
+  end
 
   def completed
     @task = Task.find(params[:id])
@@ -59,7 +59,7 @@ end
   private
 
   def tasks_create_params
-    params.permit(task: [:name, :description, :person_id, :completed_at])
+    params.permit(task: [:name, :description, :completed_at, :person_id])
     # params.permit(album: [:artist, :title])
   end
 end

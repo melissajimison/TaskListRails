@@ -1,9 +1,8 @@
 <h1>Here is the big list of things I have to do!!!!</h1>
 <div class="task-container">
-  <%@all_tasks = Task.where.not(completed_at: "").order(completed_at: :desc)%>
 
   <%@all_tasks.each do |task| %>
-  <div class="task-item">
+  <div class="task-item-azul">
     <p class="text"><%= link_to task.name, task_path(task.id)%>
       <br>
       <%=task.completed_at%>

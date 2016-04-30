@@ -13,10 +13,10 @@ Rails.application.routes.draw do
   get '/tasks/:id' => 'tasks#show', as: 'task'
 
 
-  get '/task/:id/edit' => 'tasks#edit', as: 'edit_album'
+  get '/task/:id/edit' => 'tasks#edit', as: 'edit_task'
   patch '/tasks/:id' => 'tasks#update'
 
-  # get '/tasks/:id/completed' => 'tasks#precompleted'
+  get '/tasks/completed' => 'tasks#precompleted', as: 'precompleted'
   patch '/tasks/:id/completed' => 'tasks#completed', as: 'completed'
 
   patch '/tasks/:id/uncompleted' => 'tasks#uncompleted', as: 'uncompleted'
