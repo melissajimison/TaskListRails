@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   def index
     @all_tasks = Task.order(completed_at: :asc)#.where(completed_at: '')
-end
+  end
 
   def show
     @task = Task.find(params[:id])
@@ -18,7 +18,6 @@ end
     else
       render :new
     end
-
   end
 
   def edit
@@ -45,7 +44,6 @@ end
     @task = Task.find(params[:id])
     @task.update(completed_at: "")
     redirect_to root_path
-
   end
 
   def destroy
@@ -54,11 +52,9 @@ end
     redirect_to root_path
   end
 
-
   private
 
   def tasks_create_params
     params.permit(task: [:name, :description, :completed_at, :person_id])
-    # params.permit(album: [:artist, :title])
   end
 end
